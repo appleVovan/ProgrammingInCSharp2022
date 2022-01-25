@@ -58,6 +58,11 @@
 
         }
 
+        protected void Gas()
+        {
+
+        }
+
 
         public void MyMethod()
         {
