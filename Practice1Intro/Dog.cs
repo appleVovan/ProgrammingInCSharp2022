@@ -4,6 +4,8 @@
     {
         private int age;
 
+        public int Age { get; set; }
+
         public int Get_Age()
         {
             return age;
