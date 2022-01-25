@@ -10,6 +10,7 @@
     partial class Dog
     {
         private int age;
+        private DogType dogType;
 
         public int Age 
         { 
@@ -21,6 +22,17 @@
             { 
                 age = value;
             } 
+        }
+        public DogType DogType
+        {
+            get
+            {
+                return dogType;
+            }
+            set
+            {
+                dogType = value;
+            }
         }
 
         public string Name { get; set; }
