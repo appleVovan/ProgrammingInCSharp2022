@@ -91,6 +91,10 @@
                 default:
                     break;
             }
+
+            Talk("woof");
+            Talk(3, "bark");
+            Talk(3, sit:true);
         }
     }
 }
