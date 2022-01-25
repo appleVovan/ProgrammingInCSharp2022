@@ -47,6 +47,15 @@
         }
 
 
+
+        private void Foo()
+        {
+
+        }
+
+
+
+
         public void MyMethod()
         {
             int val1 = Age;
