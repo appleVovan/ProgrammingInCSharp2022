@@ -8,11 +8,11 @@ namespace KMA.ProgrammingInCSharp2022.Practice1Intro
         static void Main(string[] args)
         {
             int myInt = 5;
-            MyMethodInt(myInt);
+            MyMethodInt(ref myInt);
             Console.WriteLine(myInt);
         }
 
-        public static void MyMethodInt(int myInt)
+        public static void MyMethodInt(ref int myInt)
         {
             myInt = 6;
             Console.WriteLine(myInt);
