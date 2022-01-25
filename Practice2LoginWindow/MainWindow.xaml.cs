@@ -14,7 +14,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice2LoginWindow
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            var but = But2;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
