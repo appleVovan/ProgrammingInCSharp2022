@@ -19,7 +19,9 @@
         <Button Grid.Row="0" Grid.Column="0" Height="50" Width="100" Margin="10">But1</Button>
         <Button Grid.Row="1" Grid.Column="0" Height="50" Width="100" Content="But2" VerticalAlignment="Bottom" Margin="10,20"></Button>
         <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
-            <Button Height="200" Width="400" Content="InnerBut"></Button>
+            <Button Height="200" Width="400">
+                <Button Height="100" Width="200" Content="InnerBut"></Button>
+            </Button>
         </Button>
     </Grid>
 </Window>
