@@ -22,7 +22,7 @@
             <Button Height="200" Width="400">
                 <Grid Width="200">
                     <Button Height="100" Width="100" Content="InnerBut" HorizontalAlignment="Left"></Button>
-                    <Button Height="100" Width="100" Content="InnerBut" HorizontalAlignment="Right"></Button>
+                    <TextBox Name="Tb" Height="100" Width="100" HorizontalAlignment="Right">azaza</TextBox>
                 </Grid>
             </Button>
         </Button>
