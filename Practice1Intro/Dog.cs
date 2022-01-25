@@ -19,8 +19,9 @@
                 return age;
             }
             set
-            { 
-                age = value;
+            {
+                if (value>0)
+                    age = value;
             } 
         }
         public DogType DogType
