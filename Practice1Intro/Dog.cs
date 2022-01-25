@@ -18,6 +18,14 @@
 
         public string Name { get; set; }
 
+        public string Identifier
+        {
+            get
+            {
+                return $"{Name} {Age}";
+            }
+        }
+
 
         public void MyMethod()
         {
