@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>KMA.ProgrammingInCSharp2022.Practice1Intro</RootNamespace>
   </PropertyGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Practice1Intro
+namespace KMA.ProgrammingInCSharp2022.Practice1Intro
 {
     class Program
     {
