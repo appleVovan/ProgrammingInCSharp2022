@@ -4,6 +4,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice1Intro
 {
     class Program
     {
+        #region ValueType
         static void Main(string[] args)
         {
             int myInt = 5;
@@ -16,5 +17,6 @@ namespace KMA.ProgrammingInCSharp2022.Practice1Intro
             myInt = 6;
             Console.WriteLine(myInt);
         }
+        #endregion
     }
 }
