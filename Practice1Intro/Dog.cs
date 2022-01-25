@@ -63,6 +63,11 @@
 
         }
 
+        public void Talk(string value)
+        {
+
+        }
+
 
         public void MyMethod()
         {
