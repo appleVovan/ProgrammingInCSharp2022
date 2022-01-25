@@ -53,7 +53,10 @@
 
         }
 
+        internal void Bar()
+        {
 
+        }
 
 
         public void MyMethod()
