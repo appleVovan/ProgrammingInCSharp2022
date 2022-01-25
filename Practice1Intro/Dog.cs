@@ -51,6 +51,19 @@
         {
             int val1 = Age;
             Age = 5;
+
+            dogType = DogType.Labrador;
+            switch (dogType)
+            {
+                case DogType.Poodle:
+                    break;
+                case DogType.Labrador:
+                    break;
+                case DogType.Labradoodle:
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
