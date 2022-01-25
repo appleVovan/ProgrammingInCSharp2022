@@ -2,5 +2,6 @@
 {
     partial class Dog
     {
+        private int age;
     }
 }
