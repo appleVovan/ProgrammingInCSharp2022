@@ -16,8 +16,8 @@
             <ColumnDefinition Width="40"></ColumnDefinition>
             <ColumnDefinition Width="0.5*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button>But1</Button>
-        <Button Grid.Row="1" Content="But2"></Button>
+        <Button Grid.Row="0" Grid.Column="0">But1</Button>
+        <Button Grid.Row="1" Grid.Column="0" Content="But2"></Button>
         <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Content ="But3"></Button>
     </Grid>
 </Window>
