@@ -1,5 +1,12 @@
 ﻿namespace KMA.ProgrammingInCSharp2022.Practice1Intro
 {
+    public enum DogType
+    {
+        Poodle,
+        Labrador,
+        Labradoodle
+    }
+
     partial class Dog
     {
         private int age;
