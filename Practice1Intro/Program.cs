@@ -34,6 +34,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice1Intro
 
         public static void MyMethodMyObject(MyClass myObject)
         {
+            myObject = new MyClass();
             myObject.MyProperty = 6;
             Console.WriteLine(myObject.MyProperty);
         }
