@@ -28,11 +28,11 @@ namespace KMA.ProgrammingInCSharp2022.Practice1Intro
         {
             MyClass myObject = new MyClass();
             myObject.MyProperty = 5;
-            MyMethodMyObject(myObject);
+            MyMethodMyObject(ref myObject);
             Console.WriteLine(myObject.MyProperty);
         }
 
-        public static void MyMethodMyObject(MyClass myObject)
+        public static void MyMethodMyObject(ref MyClass myObject)
         {
             myObject = new MyClass();
             myObject.MyProperty = 6;
