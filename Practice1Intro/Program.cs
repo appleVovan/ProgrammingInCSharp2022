@@ -7,8 +7,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice1Intro
         #region ValueType
         static void Main(string[] args)
         {
-            int myInt;
-            MyMethodInt(out myInt);
+            MyMethodInt(out int myInt);
             Console.WriteLine(myInt);
         }
 
