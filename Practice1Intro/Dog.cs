@@ -68,6 +68,11 @@
 
         }
 
+        public void Talk(int times, string value = "woof", bool sit = false)
+        {
+
+        }
+
 
         public void MyMethod()
         {
