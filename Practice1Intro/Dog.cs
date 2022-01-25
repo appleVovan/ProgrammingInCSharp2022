@@ -16,6 +16,8 @@
             } 
         }
 
+        public string Name { get; set; }
+
 
         public void MyMethod()
         {
