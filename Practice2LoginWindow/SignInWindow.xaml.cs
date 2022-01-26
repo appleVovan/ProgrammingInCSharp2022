@@ -33,5 +33,10 @@ namespace KMA.ProgrammingInCSharp2022.Practice2LoginWindow
         {
             throw new NotImplementedException();
         }
+
+        private void BCancel_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
