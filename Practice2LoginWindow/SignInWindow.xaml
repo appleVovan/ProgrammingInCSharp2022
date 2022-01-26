@@ -24,7 +24,7 @@
         <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,2" Text="Password" FontSize="9" Foreground="Gray"/>
         <PasswordBox Name="PBPassword" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5,0,5,5"/>
         <Button Name="BSignIn" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign in" Click="BSignIn_Click"/>
-        <Button Name="BSignUp" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign up"/>
+        <Button Name="BSignUp" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign up" Click="BSignUp_OnClick"/>
         <Button Name="BCancel" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Cancel"/>
     </Grid>
 </Window>

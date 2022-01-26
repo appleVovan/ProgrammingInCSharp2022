@@ -28,5 +28,10 @@ namespace KMA.ProgrammingInCSharp2022.Practice2LoginWindow
         {
 
         }
+
+        private void BSignUp_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
