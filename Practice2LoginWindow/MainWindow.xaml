@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:practice2LoginWindow="clr-namespace:KMA.ProgrammingInCSharp2022.Practice2LoginWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="220" Width="300" MinHeight="210" MinWidth="200">
     <Grid>
         <practice2LoginWindow:SignInControl></practice2LoginWindow:SignInControl>
     </Grid>
