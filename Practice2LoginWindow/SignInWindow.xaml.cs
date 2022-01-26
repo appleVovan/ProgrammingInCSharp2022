@@ -23,5 +23,10 @@ namespace KMA.ProgrammingInCSharp2022.Practice2LoginWindow
         {
             InitializeComponent();
         }
+
+        private void BSignIn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
