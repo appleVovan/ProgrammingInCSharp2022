@@ -10,8 +10,8 @@ namespace KMA.ProgrammingInCSharp2022.Practice2LoginWindow
         public MainWindow()
         {
             InitializeComponent();
-            var signInWindow = new SignInWindow();
-            signInWindow.ShowDialog();
+            //var signInWindow = new SignInWindow();
+            //signInWindow.ShowDialog();
         }
     }
 }
