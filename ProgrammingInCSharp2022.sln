@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice1Intro", "Practice1Intro\Practice1Intro.csproj", "{C77CEED1-CB92-4413-BFC1-5EB8DBCC5B77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice2LoginWindow", "Practice2LoginWindow\Practice2LoginWindow.csproj", "{F9FD1BB4-5E0F-411D-B1C0-8E8D98217E91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice2LoginWindow", "Practice2LoginWindow\Practice2LoginWindow.csproj", "{F9FD1BB4-5E0F-411D-B1C0-8E8D98217E91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice3LoginControlMVVM", "Practice3LoginControlMVVM\Practice3LoginControlMVVM.csproj", "{EA22897A-E485-482C-B411-EF5763858F85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F9FD1BB4-5E0F-411D-B1C0-8E8D98217E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9FD1BB4-5E0F-411D-B1C0-8E8D98217E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9FD1BB4-5E0F-411D-B1C0-8E8D98217E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA22897A-E485-482C-B411-EF5763858F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA22897A-E485-482C-B411-EF5763858F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA22897A-E485-482C-B411-EF5763858F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA22897A-E485-482C-B411-EF5763858F85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
