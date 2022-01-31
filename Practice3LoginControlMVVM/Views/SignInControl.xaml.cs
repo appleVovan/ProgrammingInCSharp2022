@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM
+namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Views
 {
     /// <summary>
     /// Interaction logic for SignInControl.xaml
