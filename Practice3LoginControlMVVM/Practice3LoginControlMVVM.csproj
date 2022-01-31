@@ -7,8 +7,4 @@
     <RootNamespace>KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Tools\Controls\" />
-  </ItemGroup>
-
 </Project>
