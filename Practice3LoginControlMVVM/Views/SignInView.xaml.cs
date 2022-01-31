@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.ViewModels;
 
 namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Views
 {
@@ -9,9 +10,12 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Views
     /// </summary>
     public partial class SignInView : UserControl
     {
+        private SignInViewModel _viewModel;
+
         public SignInView()
         {
             InitializeComponent();
+            DataContext = _viewModel = new SignInViewModel();
         }
 
         private void BSignIn_Click(object sender, RoutedEventArgs e)
