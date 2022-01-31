@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
 
 namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Tools.Controls
 {
@@ -20,6 +7,29 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Tools.Controls
     /// </summary>
     public partial class PasswordBoxWithCaption : UserControl
     {
+        public string Caption
+        {
+            get
+            {
+                return TbCaption.Text;
+            }
+            set
+            {
+                TbCaption.Text = value;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return TbPassword.Password;
+            }
+            set
+            {
+                TbPassword.Password = value;
+            }
+        }
         public PasswordBoxWithCaption()
         {
             InitializeComponent();
