@@ -7,9 +7,9 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Views
     /// <summary>
     /// Interaction logic for SignInControl.xaml
     /// </summary>
-    public partial class SignInControl : UserControl
+    public partial class SignInView : UserControl
     {
-        public SignInControl()
+        public SignInView()
         {
             InitializeComponent();
         }

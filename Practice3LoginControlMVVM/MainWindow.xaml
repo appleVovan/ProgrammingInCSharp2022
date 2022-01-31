@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="220" Width="300" MinHeight="210" MinWidth="200">
     <Grid>
-        <views:SignInControl></views:SignInControl>
+        <views:SignInView></views:SignInView>
     </Grid>
 </Window>
