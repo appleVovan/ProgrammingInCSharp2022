@@ -18,7 +18,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <tools:TextBoxWithCaption Grid.Row="0" Grid.ColumnSpan="2"></tools:TextBoxWithCaption>
+        <tools:TextBoxWithCaption Name="TbLogin"  Grid.Row="0" Grid.ColumnSpan="2"></tools:TextBoxWithCaption>
         <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,2" Text="Password" FontSize="9" Foreground="Gray"/>
         <PasswordBox Name="PBPassword" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5,0,5,5"/>
         <Button Name="BSignIn" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign in" Click="BSignIn_Click"/>
