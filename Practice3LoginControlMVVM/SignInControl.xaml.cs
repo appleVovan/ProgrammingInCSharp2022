@@ -16,24 +16,24 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM
 
         private void BSignIn_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(TbLogin.TbValue.Text) ||
+            if (String.IsNullOrWhiteSpace(TbLogin.Text) ||
                 String.IsNullOrWhiteSpace(PBPassword.Password))
             {
                 MessageBox.Show("Login or password is empty!");
                 return;
             }
-            MessageBox.Show($"Login successful for user {TbLogin.TbValue.Text}");
+            MessageBox.Show($"Login successful for user {TbLogin.Text}");
         }
 
         private void BSignUp_OnClick(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(TbLogin.TbValue.Text) ||
+            if (String.IsNullOrWhiteSpace(TbLogin.Text) ||
                 String.IsNullOrWhiteSpace(PBPassword.Password))
             {
                 MessageBox.Show("Login or password is empty!");
                 return;
             }
-            MessageBox.Show($"User with name {TbLogin.TbValue.Text} was created");
+            MessageBox.Show($"User with name {TbLogin.Text} was created");
         }
 
         private void BCancel_OnClick(object sender, RoutedEventArgs e)
