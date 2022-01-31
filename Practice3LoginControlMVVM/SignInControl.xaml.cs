@@ -17,7 +17,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM
         private void BSignIn_Click(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrWhiteSpace(TbLogin.Text) ||
-                String.IsNullOrWhiteSpace(PBPassword.Password))
+                String.IsNullOrWhiteSpace(PbPassword.Password))
             {
                 MessageBox.Show("Login or password is empty!");
                 return;
@@ -28,7 +28,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM
         private void BSignUp_OnClick(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrWhiteSpace(TbLogin.Text) ||
-                String.IsNullOrWhiteSpace(PBPassword.Password))
+                String.IsNullOrWhiteSpace(PbPassword.Password))
             {
                 MessageBox.Show("Login or password is empty!");
                 return;
