@@ -2,9 +2,12 @@
 {
     class UserCandidate
     {
+        #region Fields
         private string _login;
         private string _password;
-        
+        #endregion
+
+        #region Properties
         public string Login
         {
             get
@@ -26,6 +29,7 @@
             {
                 _password = value;
             }
-        }
+        } 
+        #endregion
     }
 }
