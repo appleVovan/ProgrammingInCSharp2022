@@ -20,6 +20,18 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Tools.Controls
     /// </summary>
     public partial class TextBoxWithCaption : UserControl
     {
+        public string Caption
+        {
+            get
+            {
+                return TbCaption.Text;
+            }
+            set
+            {
+                TbCaption.Text = value;
+            }
+        }
+
         public TextBoxWithCaption()
         {
             InitializeComponent();

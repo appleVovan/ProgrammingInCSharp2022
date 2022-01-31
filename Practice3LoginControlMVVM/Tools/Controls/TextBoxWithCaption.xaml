@@ -10,7 +10,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,2" Text="Caption" FontSize="9" Foreground="Gray"/>
+        <TextBlock Name="TbCaption" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,2" Text="Caption" FontSize="9" Foreground="Gray"/>
         <TextBox Name="TbValue" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5,0,5,5"/>
     </Grid>
 </UserControl>
