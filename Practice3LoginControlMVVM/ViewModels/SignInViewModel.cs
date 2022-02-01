@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Models;
 using KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Tools;
 
@@ -65,17 +66,17 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.ViewModels
 
         private void SignIn()
         {
-
+            MessageBox.Show($"Login successful for user {_user.Login}");
         }
 
         private void SignUp()
         {
-
+            MessageBox.Show($"User with name {_user.Login} was created");
         }
 
         private bool CanExecute(object obj)
         {
-            throw new System.NotImplementedException();
+            return !String.IsNullOrWhiteSpace(_user.Login) && !String.IsNullOrWhiteSpace(_user.Password);
         }
     }
 }

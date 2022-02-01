@@ -19,8 +19,8 @@
         </Grid.ColumnDefinitions>
         <tools:TextBoxWithCaption x:Name="TbLogin" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Caption="Login" Text="{Binding Login, Mode=OneWayToSource, UpdateSourceTrigger=LostFocus}" ></tools:TextBoxWithCaption>
         <tools:PasswordBoxWithCaption x:Name="PbPassword" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Caption="Password" LostFocus="PbPassword_OnLostFocus"></tools:PasswordBoxWithCaption>
-        <Button Name="BSignIn" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign in" Click="BSignIn_Click"/>
-        <Button Name="BSignUp" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign up" Click="BSignUp_OnClick"/>
-        <Button Name="BCancel" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Cancel" Click="BCancel_OnClick"/>
+        <Button Name="BSignIn" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign in" Command ="{Binding SignInCommand}"/>
+        <Button Name="BSignUp" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign up" Command ="{Binding SignUpCommand}"/>
+        <Button Name="BCancel" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Cancel" Command ="{Binding CancelCommand}"/>
     </Grid>
 </UserControl>
