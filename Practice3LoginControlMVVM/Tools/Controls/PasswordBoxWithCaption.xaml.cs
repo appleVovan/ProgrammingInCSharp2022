@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Tools.Controls
 {
@@ -7,6 +9,13 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Tools.Controls
     /// </summary>
     public partial class PasswordBoxWithCaption : UserControl
     {
+        public event Action<object,RoutedEventArgs> PasswordChanged;
+
+        public void RaisePasswordChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordChanged?.Invoke(sender, e);
+        }
+
         public string Caption
         {
             get
