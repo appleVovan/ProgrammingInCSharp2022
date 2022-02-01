@@ -4,13 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="300">
+             d:DesignHeight="100" d:DesignWidth="300"
+             x:Name="textBoxWithCaption">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock Name="TbCaption" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,2" Text="Caption" FontSize="9" Foreground="Gray"/>
-        <TextBox Name="TbValue" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5,0,5,5"/>
+        <TextBox Name="TbValue" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5,0,5,5" Text="{Binding ElementName=textBoxWithCaption, Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </UserControl>

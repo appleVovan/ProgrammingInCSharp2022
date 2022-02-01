@@ -36,13 +36,21 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Tools.Controls
         {
             get
             {
-                return TbValue.Text;
+                return (string)GetValue(TextProperty);
             }
             set
             {
-                TbValue.Text = value;
+                SetValue(TextProperty, value);
             }
         }
+
+        public static readonly DependencyProperty TextProperty = DependencyProperty.Register
+        (
+            "Text",
+            typeof(string),
+            typeof(TextBoxWithCaption),
+            new PropertyMetadata(null)
+        );
 
         public TextBoxWithCaption()
         {
