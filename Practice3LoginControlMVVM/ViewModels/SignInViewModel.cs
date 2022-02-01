@@ -13,11 +13,11 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.ViewModels
         {
             get
             {
-                return _user.Login + "g";
+                return _user.Login;
             }
             set
             {
-                _user.Login = value +"s";
+                _user.Login = value;
             }
         }
 
