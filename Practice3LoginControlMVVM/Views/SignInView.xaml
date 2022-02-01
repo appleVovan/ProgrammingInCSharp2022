@@ -17,8 +17,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="TbLogin" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" ></TextBox>
-        <PasswordBox x:Name="PbPassword" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></PasswordBox>
+        <TextBox x:Name="TbLogin" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Login}" ></TextBox>
+        <PasswordBox x:Name="PbPassword" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" LostFocus="PbPassword_OnLostFocus" ></PasswordBox>
         <Button Name="BSignIn" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign in" Click="BSignIn_Click"/>
         <Button Name="BSignUp" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign up" Click="BSignUp_OnClick"/>
         <Button Name="BCancel" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Cancel" Click="BCancel_OnClick"/>

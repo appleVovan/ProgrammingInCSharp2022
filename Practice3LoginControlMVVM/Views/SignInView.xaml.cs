@@ -44,5 +44,10 @@ namespace KMA.ProgrammingInCSharp2022.Practice3LoginControlMVVM.Views
         {
             Environment.Exit(0);
         }
+
+        private void PbPassword_OnLostFocus(object sender, RoutedEventArgs e)
+        {
+            _viewModel.Password = PbPassword.Password;
+        }
     }
 }
