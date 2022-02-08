@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using KMA.ProgrammingInCSharp2022.Practice4Navigation.Views;
 
 namespace KMA.ProgrammingInCSharp2022.Practice4Navigation
 {
@@ -10,8 +11,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation
         public MainWindow()
         {
             InitializeComponent();
-            //var signInWindow = new SignInWindow();
-            //signInWindow.ShowDialog();
+            Content = new SignInView();
         }
     }
 }
