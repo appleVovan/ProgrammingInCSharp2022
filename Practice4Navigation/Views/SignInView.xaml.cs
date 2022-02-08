@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels;
 
@@ -11,7 +12,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.Views
     {
         private SignInViewModel _viewModel;
 
-        public SignInView()
+        public SignInView(Action gotoSignUp)
         {
             InitializeComponent();
             DataContext = _viewModel = new SignInViewModel();
