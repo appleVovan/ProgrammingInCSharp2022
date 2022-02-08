@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice1Intro", "Practice1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice2LoginWindow", "Practice2LoginWindow\Practice2LoginWindow.csproj", "{F9FD1BB4-5E0F-411D-B1C0-8E8D98217E91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice3LoginControlMVVM", "Practice3LoginControlMVVM\Practice3LoginControlMVVM.csproj", "{EA22897A-E485-482C-B411-EF5763858F85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice3LoginControlMVVM", "Practice3LoginControlMVVM\Practice3LoginControlMVVM.csproj", "{EA22897A-E485-482C-B411-EF5763858F85}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice4Navigation", "Practice4Navigation\Practice4Navigation.csproj", "{5210F372-33C0-45FD-A019-EA0AFFDA9410}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EA22897A-E485-482C-B411-EF5763858F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA22897A-E485-482C-B411-EF5763858F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA22897A-E485-482C-B411-EF5763858F85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5210F372-33C0-45FD-A019-EA0AFFDA9410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5210F372-33C0-45FD-A019-EA0AFFDA9410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5210F372-33C0-45FD-A019-EA0AFFDA9410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5210F372-33C0-45FD-A019-EA0AFFDA9410}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
