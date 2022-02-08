@@ -9,7 +9,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
     {
         #region Fields
         private UserCandidate _user = new UserCandidate();
-        private RelayCommand<object> _signInCommand;
+        private RelayCommand<object> _gotoSignInCommand;
         private RelayCommand<object> _signUpCommand;
         private RelayCommand<object> _cancelCommand;
         #endregion
@@ -39,11 +39,11 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             }
         }
 
-        public RelayCommand<object> SignInCommand
+        public RelayCommand<object> GotoSignInCommand
         {
             get
             {
-                return _signInCommand ??= new RelayCommand<object>(_ => SignIn(), CanExecute);
+                return _gotoSignInCommand ??= new RelayCommand<object>(_ => SignIn(), CanExecute);
             }
         }
 
