@@ -15,7 +15,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.Views
         public SignInView(Action gotoSignUp)
         {
             InitializeComponent();
-            DataContext = _viewModel = new SignInViewModel();
+            DataContext = _viewModel = new SignInViewModel(gotoSignUp);
         }
 
         private void PbPassword_OnLostFocus(object sender, RoutedEventArgs e)

@@ -12,6 +12,13 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         private RelayCommand<object> _signInCommand;
         private RelayCommand<object> _gotoSignUpCommand;
         private RelayCommand<object> _cancelCommand;
+        private Action _gotoSignUp;
+
+        public SignInViewModel(Action gotoSignUp)
+        {
+            _gotoSignUp = gotoSignUp;
+        }
+
         #endregion
 
         #region Properties
@@ -51,7 +58,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         {
             get
             {
-                return _gotoSignUpCommand ??= new RelayCommand<object>(_ => SignUp(), CanExecute);
+                return _gotoSignUpCommand ??= new RelayCommand<object>(_ => GotoSignUp(), CanExecute);
             }
         }
 
@@ -69,9 +76,9 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             MessageBox.Show($"Login successful for user {_user.Login}");
         }
 
-        private void SignUp()
+        private void GotoSignUp()
         {
-            MessageBox.Show($"User with name {_user.Login} was created");
+            _gotoSignUp.Invoke();
         }
 
         private bool CanExecute(object obj)
