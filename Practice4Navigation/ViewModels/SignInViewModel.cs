@@ -60,7 +60,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         {
             get
             {
-                return _gotoSignUpCommand ??= new RelayCommand<object>(_ => GotoSignUp(), CanExecute);
+                return _gotoSignUpCommand ??= new RelayCommand<object>(_ => GotoSignUp());
             }
         }
 
