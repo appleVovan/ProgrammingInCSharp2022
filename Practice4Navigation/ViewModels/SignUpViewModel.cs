@@ -82,11 +82,11 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             }
         }
 
-        public int ViewType
+        public AuthNavigationTypes ViewType
         {
             get
             {
-                return 2;
+                return AuthNavigationTypes.SignUp;
             }
         }
         #endregion

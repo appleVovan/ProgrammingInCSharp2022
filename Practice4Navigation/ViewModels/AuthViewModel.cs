@@ -22,7 +22,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             
         }
 
-        internal void Navigate(int type)
+        internal void Navigate(AuthNavigationTypes type)
         {
             if (CurrentViewModel != null && CurrentViewModel.ViewType == type)
                 return;
@@ -36,7 +36,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             CurrentViewModel = viewModel;
         }
 
-        private IAuthNavigatable GetViewModel(int type)
+        private IAuthNavigatable GetViewModel(AuthNavigationTypes type)
         {
             IAuthNavigatable viewModel = _viewModels.FirstOrDefault(viewModel => viewModel.ViewType == type);
 
@@ -45,11 +45,11 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             
             switch (type)
             {
-                case 1:
-                    viewModel = new SignInViewModel(() => Navigate(2), ExitNavigation);
+                case AuthNavigationTypes.SignIn:
+                    viewModel = new SignInViewModel(() => Navigate(AuthNavigationTypes.SignUp), ExitNavigation);
                     break;
-                case 2:
-                    viewModel = new SignUpViewModel(() => Navigate(1));
+                case AuthNavigationTypes.SignUp:
+                    viewModel = new SignUpViewModel(() => Navigate(AuthNavigationTypes.SignIn));
                     break;
                 default:
                     return null;
