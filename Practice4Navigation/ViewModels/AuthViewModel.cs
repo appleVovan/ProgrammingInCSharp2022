@@ -27,20 +27,30 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             if (CurrentViewModel != null && CurrentViewModel.ViewType == type)
                 return;
 
-            IAuthNavigatable viewModel = _viewModels.FirstOrDefault(viewModel => viewModel.ViewType == type);
+            IAuthNavigatable viewModel = GetViewModel(type);
 
             if (viewModel == null)
-            {
-                if (type == 1)
-                    viewModel = new SignInViewModel(() => Navigate(2), ExitNavigation);
-                else if (type == 2)
-                    viewModel = new SignUpViewModel(() => Navigate(1));
-                else
-                    return;
-            }
+                return;
             
             _viewModels.Add(viewModel);
             CurrentViewModel = viewModel;
+        }
+
+        private IAuthNavigatable GetViewModel(int type)
+        {
+            IAuthNavigatable viewModel = _viewModels.FirstOrDefault(viewModel => viewModel.ViewType == type);
+
+            if (viewModel != null) 
+                return viewModel;
+            
+            if (type == 1)
+                viewModel = new SignInViewModel(() => Navigate(2), ExitNavigation);
+            else if (type == 2)
+                viewModel = new SignUpViewModel(() => Navigate(1));
+            else
+                return null;
+
+            return viewModel;
         }
 
         private void ExitNavigation()
