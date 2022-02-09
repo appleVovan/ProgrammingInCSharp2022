@@ -84,13 +84,29 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
 
         private void GotoSignIn()
         {
-            _gotoSignIn.Invoke();
+           _gotoSignIn.Invoke();
         }
 
         private void SignUp()
         {
-            MessageBox.Show($"User with name {_registrationUser.Login} was created");
-            _gotoSignIn.Invoke();
+            if (String.IsNullOrWhiteSpace(_registrationUser.Login) || String.IsNullOrWhiteSpace(_registrationUser.Password) || String.IsNullOrWhiteSpace(_registrationUser.FirstName))
+                MessageBox.Show("Login or password is empty.");
+            else
+            {
+                var authService = new AuthenticationService();
+                try
+                {
+                    authService.RegisterUser(_registrationUser);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Sign Up failed: {ex.Message}");
+                    return;
+                }
+
+                MessageBox.Show($"User successfully registered, please Sign In");
+                _gotoSignIn.Invoke();
+            }
         }
 
         private bool CanExecute(object obj)

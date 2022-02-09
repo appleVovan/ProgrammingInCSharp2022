@@ -75,8 +75,24 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
 
         private void SignIn()
         {
-            MessageBox.Show($"Login successful for user {_user.Login}");
-            _gotoMain.Invoke();
+            if (String.IsNullOrWhiteSpace(_user.Login) || String.IsNullOrWhiteSpace(_user.Password))
+                MessageBox.Show("Login or password is empty.");
+            else
+            {
+                var authService = new AuthenticationService();
+                User user = null;
+                try
+                {
+                    user = authService.Authenticate(_user);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Sign In failed: {ex.Message}");
+                    return;
+                }
+                MessageBox.Show($"Sign In was successful for user {user.FirstName} {user.LastName}");
+                _gotoMain.Invoke();
+            }
         }
 
         private void GotoSignUp()
