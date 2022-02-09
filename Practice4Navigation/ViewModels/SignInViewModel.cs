@@ -15,7 +15,6 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         private RelayCommand<object> _cancelCommand;
         private Action _gotoSignUp;
         private Action _gotoMain;
-        private int _viewType;
 
         public SignInViewModel(Action gotoSignUp, Action gotoMain)
         {

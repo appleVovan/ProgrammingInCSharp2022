@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:KMA.ProgrammingInCSharp2022.Practice4Navigation.Views"
              xmlns:viewModels="clr-namespace:KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Content="{Binding CurrentViewModel}">
+             d:DesignHeight="450" d:DesignWidth="800" Content="{Binding CurrentViewModel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
     <UserControl.Resources>
         <DataTemplate DataType="{ x:Type viewModels:SignInViewModel}">
             <local:SignInView></local:SignInView>
