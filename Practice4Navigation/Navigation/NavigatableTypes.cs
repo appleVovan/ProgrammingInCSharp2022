@@ -6,11 +6,9 @@
         SignUp
     }
 
-    internal interface IAuthNavigatable
+    enum MainNavigationTypes
     {
-        AuthNavigationTypes ViewType
-        {
-            get;
-        }
+        Main,
+        Auth
     }
 }

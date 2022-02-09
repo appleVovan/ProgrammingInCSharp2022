@@ -6,7 +6,7 @@ using KMA.ProgrammingInCSharp2022.Practice4Navigation.Tools;
 
 namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
 {
-    class SignInViewModel : IAuthNavigatable
+    class SignInViewModel : INavigatable<AuthNavigationTypes>
     {
         #region Fields
         private UserCandidate _user = new UserCandidate();

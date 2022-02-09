@@ -3,7 +3,7 @@ using KMA.ProgrammingInCSharp2022.Practice4Navigation.Navigation;
 
 namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
 {
-    class MainViewModel : IMainNavigatable
+    class MainViewModel : INavigatable<MainNavigationTypes>
     {
         public MainViewModel(Action exitEvent)
         {
