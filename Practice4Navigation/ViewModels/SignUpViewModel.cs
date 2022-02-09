@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows;
 using KMA.ProgrammingInCSharp2022.Practice4Navigation.Models;
+using KMA.ProgrammingInCSharp2022.Practice4Navigation.Navigation;
 using KMA.ProgrammingInCSharp2022.Practice4Navigation.Tools;
 
 namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
 {
-    class SignUpViewModel
+    class SignUpViewModel : IAuthNavigatable
     {
         #region Fields
         private RegistrationUser _registrationUser = new RegistrationUser();
@@ -78,6 +79,14 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             get
             {
                 return _cancelCommand ??= new RelayCommand<object>(_ => Environment.Exit(0));
+            }
+        }
+
+        public int ViewType
+        {
+            get
+            {
+                return 2;
             }
         }
         #endregion

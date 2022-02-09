@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows;
 using KMA.ProgrammingInCSharp2022.Practice4Navigation.Models;
+using KMA.ProgrammingInCSharp2022.Practice4Navigation.Navigation;
 using KMA.ProgrammingInCSharp2022.Practice4Navigation.Tools;
 
 namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
 {
-    class SignInViewModel
+    class SignInViewModel : IAuthNavigatable
     {
         #region Fields
         private UserCandidate _user = new UserCandidate();
@@ -14,6 +15,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         private RelayCommand<object> _cancelCommand;
         private Action _gotoSignUp;
         private Action _gotoMain;
+        private int _viewType;
 
         public SignInViewModel(Action gotoSignUp, Action gotoMain)
         {
@@ -71,6 +73,14 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
                 return _cancelCommand ??= new RelayCommand<object>(_ => Environment.Exit(0));
             }
         }
+
+        public int ViewType
+        {
+            get
+            {
+                return 1;
+            }
+        }
         #endregion
 
         private void SignIn()
@@ -104,5 +114,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         {
             return !String.IsNullOrWhiteSpace(_user.Login) && !String.IsNullOrWhiteSpace(_user.Password);
         }
+
+        
     }
 }
