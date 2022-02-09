@@ -21,6 +21,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         public AuthViewModel(Action exitNavigationAction)
         {
             _exitNavigation = exitNavigationAction;
+            Navigate(AuthNavigationTypes.SignIn);
         }
 
         internal void Navigate(AuthNavigationTypes type)
