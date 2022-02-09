@@ -10,13 +10,12 @@ using KMA.ProgrammingInCSharp2022.Practice4Navigation.Navigation;
 
 namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
 {
-    class AuthViewModel : INotifyPropertyChanged, IMainNavigatable
+    class MainWindowViewModel : INotifyPropertyChanged
     {
-        private List<IAuthNavigatable> _viewModels = new List<IAuthNavigatable>();
-        private Action _exitNavigation;
-        private IAuthNavigatable _currentViewModel;
+        private List<IMainNavigatable> _viewModels = new List<IMainNavigatable>();
+        private IMainNavigatable _currentViewModel;
 
-        public IAuthNavigatable CurrentViewModel
+        public IMainNavigatable CurrentViewModel
         {
             get 
             {
@@ -31,26 +30,17 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             }
         }
 
-        public MainNavigationTypes ViewType
+        public MainWindowViewModel()
         {
-            get
-            {
-                return MainNavigationTypes.Auth;
-            }
+            Navigate(MainNavigationTypes.Auth);
         }
 
-        public AuthViewModel(Action exitNavigationAction)
-        {
-            _exitNavigation = exitNavigationAction;
-            Navigate(AuthNavigationTypes.SignIn);
-        }
-
-        internal void Navigate(AuthNavigationTypes type)
+        internal void Navigate(MainNavigationTypes type)
         {
             if (CurrentViewModel != null && CurrentViewModel.ViewType == type)
                 return;
 
-            IAuthNavigatable viewModel = GetViewModel(type);
+            IMainNavigatable viewModel = GetViewModel(type);
 
             if (viewModel == null)
                 return;
@@ -59,20 +49,20 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             CurrentViewModel = viewModel;
         }
 
-        private IAuthNavigatable GetViewModel(AuthNavigationTypes type)
+        private IMainNavigatable GetViewModel(MainNavigationTypes type)
         {
-            IAuthNavigatable viewModel = _viewModels.FirstOrDefault(viewModel => viewModel.ViewType == type);
+            IMainNavigatable viewModel = _viewModels.FirstOrDefault(viewModel => viewModel.ViewType == type);
 
             if (viewModel != null) 
                 return viewModel;
             
             switch (type)
             {
-                case AuthNavigationTypes.SignIn:
-                    viewModel = new SignInViewModel(() => Navigate(AuthNavigationTypes.SignUp), ExitNavigation);
+                case MainNavigationTypes.Auth:
+                    viewModel = new AuthViewModel(()=>Navigate(MainNavigationTypes.Main));
                     break;
-                case AuthNavigationTypes.SignUp:
-                    viewModel = new SignUpViewModel(() => Navigate(AuthNavigationTypes.SignIn));
+                case MainNavigationTypes.Main:
+                    viewModel = new MainViewModel(() => Navigate(MainNavigationTypes.Auth));
                     break;
                 default:
                     return null;
@@ -80,12 +70,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
 
             return viewModel;
         }
-
-        private void ExitNavigation()
-        {
-            _exitNavigation.Invoke();
-        }
-
+        
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -93,7 +78,5 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        
     }
 }

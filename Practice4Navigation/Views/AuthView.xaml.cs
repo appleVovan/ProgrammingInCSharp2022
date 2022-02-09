@@ -9,10 +9,9 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.Views
     /// </summary>
     public partial class AuthView : UserControl
     {
-        public AuthView(Action gotoMain)
+        public AuthView()
         {
             InitializeComponent();
-            DataContext = new AuthViewModel(gotoMain);
         }
     }
 }

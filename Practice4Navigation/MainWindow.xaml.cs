@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels;
 using KMA.ProgrammingInCSharp2022.Practice4Navigation.Views;
 
 namespace KMA.ProgrammingInCSharp2022.Practice4Navigation
@@ -11,13 +12,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation
         public MainWindow()
         {
             InitializeComponent();
-            Content = new AuthView(GotoMainView);
+            DataContext = new MainWindowViewModel();
         }
-        
-        public void GotoMainView()
-        {
-            Content = new MainView();
-        }
-
     }
 }

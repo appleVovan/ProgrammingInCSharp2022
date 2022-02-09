@@ -4,6 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:KMA.ProgrammingInCSharp2022.Practice4Navigation.Views"
+        xmlns:viewModels="clr-namespace:KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="220" Width="300" MinHeight="210" MinWidth="200">
+        Title="MainWindow" Height="220" Width="300" MinHeight="210" MinWidth="200" Content="{Binding CurrentViewModel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+    <Window.Resources>
+        <DataTemplate DataType="{ x:Type viewModels:MainViewModel}">
+            <views:MainView></views:MainView>
+        </DataTemplate>
+        <DataTemplate DataType="{ x:Type viewModels:AuthViewModel}">
+            <views:AuthView></views:AuthView>
+        </DataTemplate>
+    </Window.Resources>
 </Window>
