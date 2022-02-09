@@ -43,12 +43,17 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
             if (viewModel != null) 
                 return viewModel;
             
-            if (type == 1)
-                viewModel = new SignInViewModel(() => Navigate(2), ExitNavigation);
-            else if (type == 2)
-                viewModel = new SignUpViewModel(() => Navigate(1));
-            else
-                return null;
+            switch (type)
+            {
+                case 1:
+                    viewModel = new SignInViewModel(() => Navigate(2), ExitNavigation);
+                    break;
+                case 2:
+                    viewModel = new SignUpViewModel(() => Navigate(1));
+                    break;
+                default:
+                    return null;
+            }
 
             return viewModel;
         }
