@@ -10,17 +10,14 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.Views
     /// </summary>
     public partial class SignUpView : UserControl
     {
-        private SignUpViewModel _viewModel;
-
-        public SignUpView(Action gotoSignIn)
+        public SignUpView()
         {
             InitializeComponent();
-            DataContext = _viewModel = new SignUpViewModel(gotoSignIn);
         }
 
         private void PbPassword_OnLostFocus(object sender, RoutedEventArgs e)
         {
-            _viewModel.Password = PbPassword.Password;
+            ((SignUpViewModel)DataContext).Password = PbPassword.Password;
         }
     }
 }
