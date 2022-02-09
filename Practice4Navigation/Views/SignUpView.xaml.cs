@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels;
 
@@ -11,10 +12,10 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.Views
     {
         private SignUpViewModel _viewModel;
 
-        public SignUpView()
+        public SignUpView(Action gotoSignIn)
         {
             InitializeComponent();
-            DataContext = _viewModel = new SignUpViewModel();
+            DataContext = _viewModel = new SignUpViewModel(gotoSignIn);
         }
 
         private void PbPassword_OnLostFocus(object sender, RoutedEventArgs e)

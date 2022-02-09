@@ -16,7 +16,12 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation
 
         public void GotoSignUp()
         {
-            Content = new SignUpView();
+            Content = new SignUpView(GotoSignIn);
+        }
+
+        public void GotoSignIn()
+        {
+            Content = new SignInView(GotoSignUp);
         }
     }
 }
