@@ -20,7 +20,7 @@
         <controls:TextBoxWithCaption x:Name="TbLogin" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Caption="Login" Text="{Binding Login, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" ></controls:TextBoxWithCaption>
         <controls:PasswordBoxWithCaption x:Name="PbPassword" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Caption="Password" PasswordChanged="PbPassword_OnLostFocus"></controls:PasswordBoxWithCaption>
         <Button Name="BSignIn" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign in" Command ="{Binding SignInCommand}"/>
-        <Button Name="BSignUp" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign up" Command ="{Binding GotoSignUpCommand}"/>
+        <Button Name="BSignUp" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="To Sign up" Command ="{Binding GotoSignUpCommand}"/>
         <Button Name="BCancel" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Cancel" Command ="{Binding CancelCommand}"/>
     </Grid>
 </UserControl>

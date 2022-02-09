@@ -8,7 +8,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
     class SignUpViewModel
     {
         #region Fields
-        private UserCandidate _user = new UserCandidate();
+        private RegistrationUser _registrationUser = new RegistrationUser();
         private RelayCommand<object> _gotoSignInCommand;
         private RelayCommand<object> _signUpCommand;
         private RelayCommand<object> _cancelCommand;
@@ -22,15 +22,26 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         #endregion
 
         #region Properties
+        public string FirstName
+        {
+            get
+            {
+                return _registrationUser.FirstName;
+            }
+            set
+            {
+                _registrationUser.FirstName = value;
+            }
+        }
         public string Login
         {
             get
             {
-                return _user.Login;
+                return _registrationUser.Login;
             }
             set
             {
-                _user.Login = value;
+                _registrationUser.Login = value;
             }
         }
 
@@ -38,11 +49,11 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         {
             get
             {
-                return _user.Password;
+                return _registrationUser.Password;
             }
             set
             {
-                _user.Password = value;
+                _registrationUser.Password = value;
             }
         }
 
@@ -78,13 +89,13 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
 
         private void SignUp()
         {
-            MessageBox.Show($"User with name {_user.Login} was created");
+            MessageBox.Show($"User with name {_registrationUser.Login} was created");
             _gotoSignIn.Invoke();
         }
 
         private bool CanExecute(object obj)
         {
-            return !String.IsNullOrWhiteSpace(_user.Login) && !String.IsNullOrWhiteSpace(_user.Password);
+            return !String.IsNullOrWhiteSpace(_registrationUser.Login) && !String.IsNullOrWhiteSpace(_registrationUser.Password) && !String.IsNullOrWhiteSpace(_registrationUser.FirstName);
         }
     }
 }
