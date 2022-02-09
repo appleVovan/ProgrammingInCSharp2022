@@ -13,10 +13,12 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         private RelayCommand<object> _gotoSignUpCommand;
         private RelayCommand<object> _cancelCommand;
         private Action _gotoSignUp;
+        private Action _gotoMain;
 
-        public SignInViewModel(Action gotoSignUp)
+        public SignInViewModel(Action gotoSignUp, Action gotoMain)
         {
             _gotoSignUp = gotoSignUp;
+            _gotoMain = gotoMain;
         }
 
         #endregion
@@ -74,6 +76,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice4Navigation.ViewModels
         private void SignIn()
         {
             MessageBox.Show($"Login successful for user {_user.Login}");
+            _gotoMain.Invoke();
         }
 
         private void GotoSignUp()
