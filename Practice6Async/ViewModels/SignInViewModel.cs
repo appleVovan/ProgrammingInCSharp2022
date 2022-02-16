@@ -17,6 +17,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
         private RelayCommand<object> _cancelCommand;
         private Action _gotoSignUp;
         private Action _gotoMain;
+        private bool _isEnabled = true;
 
         public SignInViewModel(Action gotoSignUp, Action gotoMain)
         {
@@ -82,6 +83,19 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
                 return AuthNavigationTypes.SignIn;
             }
         }
+
+        public bool IsEnabled
+        {
+            get
+            {
+                return _isEnabled;
+            }
+            set
+            {
+                _isEnabled = value;
+            }
+        }
+
         #endregion
 
         private async void SignIn()
@@ -94,12 +108,17 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
                 User user = null;
                 try
                 {
-                    user = await Task.Run(()=>authService.Authenticate(_user));
+                    IsEnabled = false;
+                    user = await Task.Run(() => authService.Authenticate(_user));
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Sign In failed: {ex.Message}");
                     return;
+                }
+                finally
+                {
+                    IsEnabled = true;
                 }
                 MessageBox.Show($"Sign In was successful for user {user.FirstName} {user.LastName}");
                 _gotoMain.Invoke();
@@ -115,7 +134,6 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
         {
             return !String.IsNullOrWhiteSpace(_user.Login) && !String.IsNullOrWhiteSpace(_user.Password);
         }
-
         
     }
 }

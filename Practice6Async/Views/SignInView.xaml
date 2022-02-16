@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls1="clr-namespace:KMA.ProgrammingInCSharp2022.Practice6Async.Tools.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="220" d:DesignWidth="300">
+             d:DesignHeight="220" d:DesignWidth="300" IsEnabled="{Binding IsEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
