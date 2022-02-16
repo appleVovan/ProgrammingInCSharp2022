@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Models;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Navigation;
@@ -93,7 +94,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
                 User user = null;
                 try
                 {
-                    user = authService.Authenticate(_user);
+                    user = await Task.Run(()=>authService.Authenticate(_user));
                 }
                 catch (Exception ex)
                 {
