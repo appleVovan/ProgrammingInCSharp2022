@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels;
+﻿using System.Windows;
 
 namespace KMA.ProgrammingInCSharp2022.Practice6Async.Managers
 {
     class LoaderManager
     {
-        private static readonly object _locker = new object();
+        private static readonly object Locker = new object();
         private static LoaderManager _instance;
 
 
@@ -20,20 +14,20 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.Managers
             {
                 if (_instance != null)
                     return _instance;
-                lock (_locker)
+                lock (Locker)
                 {
                     return _instance ??= new LoaderManager();
                 }
             }
         }
 
-        private MainWindowViewModel _loaderOwner;
+        private ILoaderOwner _loaderOwner;
 
         private LoaderManager()
         {
         }
 
-        public void Initialize(MainWindowViewModel loaderOwner)
+        public void Initialize(ILoaderOwner loaderOwner)
         {
             _loaderOwner = loaderOwner;
         }

@@ -1,9 +1,10 @@
 ﻿using System.Windows;
+using KMA.ProgrammingInCSharp2022.Practice6Async.Managers;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Navigation;
 
 namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
 {
-    class MainWindowViewModel : BaseNavigatableViewModel<MainNavigationTypes>
+    class MainWindowViewModel : BaseNavigatableViewModel<MainNavigationTypes>, ILoaderOwner
     {
         private bool _isEnabled = true;
         private Visibility _loaderVisibility = Visibility.Collapsed;
