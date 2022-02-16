@@ -20,6 +20,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
         private Action _gotoSignUp;
         private Action _gotoMain;
         private bool _isEnabled = true;
+        private Visibility _loaderVisibility = Visibility.Collapsed;
 
         public SignInViewModel(Action gotoSignUp, Action gotoMain)
         {
@@ -92,9 +93,22 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
             {
                 return _isEnabled;
             }
-            set
+            private set
             {
                 _isEnabled = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Visibility LoaderVisibility
+        {
+            get
+            {
+                return _loaderVisibility;
+            }
+            private set
+            {
+                _loaderVisibility = value;
                 OnPropertyChanged();
             }
         }
@@ -112,6 +126,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
                 try
                 {
                     IsEnabled = false;
+                    LoaderVisibility = Visibility.Visible;
                     user = await Task.Run(() => authService.Authenticate(_user));
                 }
                 catch (Exception ex)
@@ -122,6 +137,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
                 finally
                 {
                     IsEnabled = true;
+                    LoaderVisibility = Visibility.Collapsed;
                 }
                 MessageBox.Show($"Sign In was successful for user {user.FirstName} {user.LastName}");
                 _gotoMain.Invoke();
