@@ -17,7 +17,7 @@
         </DataTemplate>
     </Window.Resources>
     <Grid>
-        <ContentControl Content="{Binding CurrentViewModel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></ContentControl>
+        <ContentControl Content="{Binding CurrentViewModel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding IsEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></ContentControl>
         <fa:ImageAwesome Icon="Refresh" Spin="True" Height="50" Width="50" Visibility="{Binding LoaderVisibility, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></fa:ImageAwesome>
     </Grid>
 </Window>

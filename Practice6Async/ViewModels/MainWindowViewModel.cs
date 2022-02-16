@@ -14,7 +14,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
             {
                 return _isEnabled;
             }
-            private set
+            set
             {
                 _isEnabled = value;
                 OnPropertyChanged();
@@ -27,7 +27,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
             {
                 return _loaderVisibility;
             }
-            private set
+            set
             {
                 _loaderVisibility = value;
                 OnPropertyChanged();
