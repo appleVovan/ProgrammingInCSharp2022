@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice3LoginControlMVVM",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice4Navigation", "Practice4Navigation\Practice4Navigation.csproj", "{5210F372-33C0-45FD-A019-EA0AFFDA9410}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice6Async", "Practice6Async\Practice6Async.csproj", "{93553E85-1442-46DF-9A1C-75AEC6EFD076}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5210F372-33C0-45FD-A019-EA0AFFDA9410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5210F372-33C0-45FD-A019-EA0AFFDA9410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5210F372-33C0-45FD-A019-EA0AFFDA9410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93553E85-1442-46DF-9A1C-75AEC6EFD076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93553E85-1442-46DF-9A1C-75AEC6EFD076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93553E85-1442-46DF-9A1C-75AEC6EFD076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93553E85-1442-46DF-9A1C-75AEC6EFD076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
