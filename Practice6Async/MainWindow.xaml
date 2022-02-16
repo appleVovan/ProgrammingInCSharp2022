@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels1="clr-namespace:KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels"
         xmlns:views1="clr-namespace:KMA.ProgrammingInCSharp2022.Practice6Async.Views"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        Title="MainWindow" Height="220" Width="300" MinHeight="210" MinWidth="200" Content="{Binding CurrentViewModel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+        Title="MainWindow" Height="220" Width="300" MinHeight="210" MinWidth="200">
     <Window.Resources>
         <DataTemplate DataType="{ x:Type viewModels1:MainViewModel}">
             <views1:MainView></views1:MainView>
@@ -15,4 +16,8 @@
             <views1:AuthView></views1:AuthView>
         </DataTemplate>
     </Window.Resources>
+    <Grid>
+        <ContentControl Content="{Binding CurrentViewModel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></ContentControl>
+        <fa:ImageAwesome Icon="Refresh" Spin="True" Height="50" Width="50" Visibility="{Binding LoaderVisibility, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></fa:ImageAwesome>
+    </Grid>
 </Window>
