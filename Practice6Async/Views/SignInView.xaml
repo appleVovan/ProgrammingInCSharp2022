@@ -4,23 +4,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls1="clr-namespace:KMA.ProgrammingInCSharp2022.Practice6Async.Tools.Controls"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
              mc:Ignorable="d" 
              d:DesignHeight="220" d:DesignWidth="300" IsEnabled="{Binding IsEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <controls1:TextBoxWithCaption x:Name="TbLogin" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Caption="Login" Text="{Binding Login, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></controls1:TextBoxWithCaption>
-        <controls1:PasswordBoxWithCaption x:Name="PbPassword" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Caption="Password" PasswordChanged="PbPassword_OnLostFocus"></controls1:PasswordBoxWithCaption>
-        <Button Name="BSignIn" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign in" Command ="{Binding SignInCommand}"/>
-        <Button Name="BSignUp" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="To Sign up" Command ="{Binding GotoSignUpCommand}"/>
-        <Button Name="BCancel" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Cancel" Command ="{Binding CancelCommand}"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <controls1:TextBoxWithCaption x:Name="TbLogin" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Caption="Login" Text="{Binding Login, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></controls1:TextBoxWithCaption>
+            <controls1:PasswordBoxWithCaption x:Name="PbPassword" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Caption="Password" PasswordChanged="PbPassword_OnLostFocus"></controls1:PasswordBoxWithCaption>
+            <Button Name="BSignIn" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Sign in" Command ="{Binding SignInCommand}"/>
+            <Button Name="BSignUp" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="To Sign up" Command ="{Binding GotoSignUpCommand}"/>
+            <Button Name="BCancel" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" Margin="5" Content="Cancel" Command ="{Binding CancelCommand}"/>
+        </Grid>
+        <fa:ImageAwesome Icon="Refresh" Spin="True" Height="50" Width="50" Visibility="{Binding LoaderVisibility, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></fa:ImageAwesome>
     </Grid>
 </UserControl>
