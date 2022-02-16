@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Models;
@@ -8,7 +10,7 @@ using KMA.ProgrammingInCSharp2022.Practice6Async.Tools;
 
 namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
 {
-    class SignInViewModel : INavigatable<AuthNavigationTypes>
+    class SignInViewModel : INavigatable<AuthNavigationTypes>, INotifyPropertyChanged
     {
         #region Fields
         private UserCandidate _user = new UserCandidate();
@@ -93,6 +95,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
             set
             {
                 _isEnabled = value;
+                OnPropertyChanged();
             }
         }
 
@@ -134,6 +137,13 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
         {
             return !String.IsNullOrWhiteSpace(_user.Login) && !String.IsNullOrWhiteSpace(_user.Password);
         }
-        
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
