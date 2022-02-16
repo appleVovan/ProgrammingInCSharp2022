@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
+using KMA.ProgrammingInCSharp2022.Practice6Async.Managers;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Models;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Navigation;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Services;
@@ -97,7 +99,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
            _gotoSignIn.Invoke();
         }
 
-        private void SignUp()
+        private async void SignUp()
         {
             if (String.IsNullOrWhiteSpace(_registrationUser.Login) || String.IsNullOrWhiteSpace(_registrationUser.Password) || String.IsNullOrWhiteSpace(_registrationUser.FirstName))
                 MessageBox.Show("Login or password is empty.");
@@ -106,12 +108,17 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
                 var authService = new AuthenticationService();
                 try
                 {
-                    authService.RegisterUser(_registrationUser);
+                    LoaderManager.Instance.ShowLoader();
+                    await Task.Run(() => authService.RegisterUser(_registrationUser));
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Sign Up failed: {ex.Message}");
                     return;
+                }
+                finally
+                {
+                    LoaderManager.Instance.HideLoader();
                 }
 
                 MessageBox.Show($"User successfully registered, please Sign In");
