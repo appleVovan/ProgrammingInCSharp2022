@@ -19,8 +19,6 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
         private RelayCommand<object> _cancelCommand;
         private Action _gotoSignUp;
         private Action _gotoMain;
-        private bool _isEnabled = true;
-        private Visibility _loaderVisibility = Visibility.Collapsed;
 
         public SignInViewModel(Action gotoSignUp, Action gotoMain)
         {
@@ -84,32 +82,6 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
             get
             {
                 return AuthNavigationTypes.SignIn;
-            }
-        }
-
-        public bool IsEnabled
-        {
-            get
-            {
-                return _isEnabled;
-            }
-            private set
-            {
-                _isEnabled = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public Visibility LoaderVisibility
-        {
-            get
-            {
-                return _loaderVisibility;
-            }
-            private set
-            {
-                _loaderVisibility = value;
-                OnPropertyChanged();
             }
         }
 
