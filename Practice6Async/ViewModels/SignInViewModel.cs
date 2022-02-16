@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
+using KMA.ProgrammingInCSharp2022.Practice6Async.Managers;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Models;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Navigation;
 using KMA.ProgrammingInCSharp2022.Practice6Async.Services;
@@ -97,8 +98,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
                 User user = null;
                 try
                 {
-                    IsEnabled = false;
-                    LoaderVisibility = Visibility.Visible;
+                    LoaderManager.Instance.ShowLoader();
                     user = await Task.Run(() => authService.Authenticate(_user));
                 }
                 catch (Exception ex)
@@ -108,8 +108,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
                 }
                 finally
                 {
-                    IsEnabled = true;
-                    LoaderVisibility = Visibility.Collapsed;
+                    LoaderManager.Instance.HideLoader();
                 }
                 MessageBox.Show($"Sign In was successful for user {user.FirstName} {user.LastName}");
                 _gotoMain.Invoke();
