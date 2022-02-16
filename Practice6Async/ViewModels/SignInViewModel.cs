@@ -83,7 +83,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice6Async.ViewModels
         }
         #endregion
 
-        private void SignIn()
+        private async void SignIn()
         {
             if (String.IsNullOrWhiteSpace(_user.Login) || String.IsNullOrWhiteSpace(_user.Password))
                 MessageBox.Show("Login or password is empty.");
