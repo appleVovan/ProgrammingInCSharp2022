@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="KMA.ProgrammingInCSharp2022.Practice7Serialization.Views.AuthView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels1="clr-namespace:KMA.ProgrammingInCSharp2022.Practice7Serialization.ViewModels"
+             xmlns:views="clr-namespace:KMA.ProgrammingInCSharp2022.Practice7Serialization.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Content="{Binding CurrentViewModel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+    <UserControl.Resources>
+        <DataTemplate DataType="{ x:Type viewModels1:SignInViewModel}">
+            <views:SignInView></views:SignInView>
+        </DataTemplate>
+        <DataTemplate DataType="{ x:Type viewModels1:SignUpViewModel}">
+            <views:SignUpView></views:SignUpView>
+        </DataTemplate>
+    </UserControl.Resources>
+</UserControl>
