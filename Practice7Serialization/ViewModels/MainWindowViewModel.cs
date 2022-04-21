@@ -37,6 +37,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice7Serialization.ViewModels
 
         public MainWindowViewModel()
         {
+            LoaderManager.Instance.Initialize(this);
             Navigate(MainNavigationTypes.Auth);
         }
         
