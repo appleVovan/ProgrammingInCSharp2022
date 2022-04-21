@@ -62,5 +62,23 @@ namespace KMA.ProgrammingInCSharp2022.Practice7Serialization.Repositories
 
             return res;
         }
+
+        public List<DBUser> GetAll()
+        {
+            var res = new List<DBUser>();
+            foreach (var file in Directory.EnumerateFiles(BaseFolder))
+            {
+                string stringObj = null;
+
+                using (StreamReader sw = new StreamReader(file))
+                {
+                    stringObj = sw.ReadToEnd();
+                }
+
+                res.Add(JsonSerializer.Deserialize<DBUser>(stringObj));
+            }
+
+            return res;
+        }
     }
 }

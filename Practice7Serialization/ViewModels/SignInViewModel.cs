@@ -111,6 +111,7 @@ namespace KMA.ProgrammingInCSharp2022.Practice7Serialization.ViewModels
                     LoaderManager.Instance.HideLoader();
                 }
                 MessageBox.Show($"Sign In was successful for user {user.FirstName} {user.LastName}");
+                StationManager.CurrentUser = user;
                 _gotoMain.Invoke();
             }
         }
